@@ -26,8 +26,13 @@ Dashboard ini dibuat untuk memberikan wawasan strategis mengenai performa logist
     ```
     pip install -r requirements.txt
     ```
+    
 ## How to Run the Dashboard
 Pastikan terminal berada di dalam folder dashboard, lalu jalankan:
 ```
 streamlit run dashboard.py
+
 ```
+
+## Live Dashboard
+Kamu bisa mengakses dashboard interaktif ini di sini: (https://dashboard-e-commerce-logistics-satisfaction-dashboard.streamlit.app/)
