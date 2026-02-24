@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import geopandas as gpd
 import plotly.express as px
+import os
 
 # Menyiapkan DataFrame
 # --- KONFIGURASI HALAMAN DASAR ---
@@ -77,10 +78,11 @@ def create_geo_analysis(df, brazil_map):
 # --- LOAD DATA ---
 @st.cache_data
 def load_data():
-    main_df = pd.read_csv("main_data_dashboard.csv")
+    base_dir = os.path.dirname(__file__) # Mencari path relatif terhadap file dashboard.py ini sendiri
+    file_path = os.path.join(base_dir, 'main_data_dashboard.csv')
+    
+    main_df = pd.read_csv(file_path)
     return main_df
-
-main_df = load_data()
 
 # Membuat Komponen Widget
 # --- SIDEBAR FILTER GLOBAL ---
@@ -274,3 +276,4 @@ with tab2:
 
     # Footnote/Legend Explanation
     st.caption("🔴 Redder areas indicate higher delay rates. 🔵 Larger bubbles indicate higher seller concentration.")
+
