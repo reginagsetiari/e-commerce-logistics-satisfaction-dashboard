@@ -83,6 +83,8 @@ def load_data():
     
     main_df = pd.read_csv(file_path)
     return main_df
+    
+main_df = load_data()
 
 # Membuat Komponen Widget
 # --- SIDEBAR FILTER GLOBAL ---
@@ -276,4 +278,5 @@ with tab2:
 
     # Footnote/Legend Explanation
     st.caption("🔴 Redder areas indicate higher delay rates. 🔵 Larger bubbles indicate higher seller concentration.")
+
 
